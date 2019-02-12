@@ -9,7 +9,8 @@ One time Setup
 Basic Commands
 --------------
 1. Run website locally:  
-`$ bundle exec jekyll serve` and then go to [http://localhost:4000](http://localhost:4000)
+    `$ cd blog`  
+    `$ bundle exec jekyll serve` and then go to [http://localhost:4000](http://localhost:4000)
 2. 
 
 
