@@ -420,6 +420,7 @@ blockquote cite a {
 
 a {
     color: color(var(--blue) l(-5%));
+    color: #26a8ed;
     text-decoration: none;
 }
 
@@ -2362,6 +2363,8 @@ Usage (In Ghost edtior):
     padding: 9px 16px;
     border: color(var(--midgrey) l(+20%)) 1px solid;
     color: var(--midgrey);
+    /*border: color(#738a94 l(+20%)) 1px solid;*/
+    /*color: #738a94;*/
     font-size: 1.2rem;
     line-height: 1;
     font-weight: 500;
@@ -3315,4 +3318,127 @@ Usage (In Ghost edtior):
 
 .error-template .post-feed {
     padding-top: 0;
+}
+
+
+
+.button {
+    display: inline-flex;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none !important;
+    background-color: #fff;
+    background: #fff;
+    color: #3525D3 !important;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 16px 32px;
+    height: 48px;
+    text-align: center;
+    white-space: nowrap
+}
+
+.button:active {
+    outline: 0
+}
+
+.button::before {
+    border-radius: 2px
+}
+
+.button-shadow {
+    position: relative
+}
+
+.button-shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(32,41,50,0.12);
+    mix-blend-mode: multiply;
+    transition: box-shadow .15s ease
+}
+
+.button-shadow:hover::before {
+    box-shadow: 0 8px 16px rgba(32,41,50,0.16)
+}
+
+.button-sm {
+    padding: 8px 24px;
+    height: 32px
+}
+
+.button-sm.button-shadow::before {
+    box-shadow: 0 4px 16px rgba(32,41,50,0.12)
+}
+
+.button-sm.button-shadow:hover::before {
+    box-shadow: 0 4px 16px rgba(32,41,50,0.16)
+}
+
+.button-primary,.button-secondary {
+    color: #fff !important;
+    transition: background .15s ease
+}
+
+.button-primary {
+    background: #3525D3
+}
+
+.button-primary:hover {
+    background: #3d2dda
+}
+
+.button-primary.button-shadow::before {
+    box-shadow: 0 8px 16px rgba(53,37,211,0.24)
+}
+
+.button-primary.button-shadow:hover::before {
+    box-shadow: 0 8px 16px rgba(53,37,211,0.32)
+}
+
+.button-primary .button-sm.button-shadow::before {
+    box-shadow: 0 4px 16px rgba(53,37,211,0.24)
+}
+
+.button-primary .button-sm.button-shadow:hover::before {
+    box-shadow: 0 4px 16px rgba(53,37,211,0.32)
+}
+
+.button-secondary {
+    background: #12c1e9;
+    background: linear-gradient(65deg, #08f 0, #23FAD2 100%)
+}
+
+.button-secondary:hover {
+    background: #1dc7ee;
+    background: linear-gradient(65deg, #058aff 0, #32fad5 100%)
+}
+
+.button-secondary.button-shadow::before {
+    box-shadow: 0 8px 16px rgba(18,193,233,0.24)
+}
+
+.button-secondary.button-shadow:hover::before {
+    box-shadow: 0 8px 16px rgba(18,193,233,0.32)
+}
+
+.button-secondary .button-sm.button-shadow::before {
+    box-shadow: 0 4px 16px rgba(18,193,233,0.24)
+}
+
+.button-secondary .button-sm.button-shadow:hover::before {
+    box-shadow: 0 4px 16px rgba(18,193,233,0.32)
+}
+
+.button-block {
+    display: flex;
+    width: 100%
 }

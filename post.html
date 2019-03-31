@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="post-template">
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+
+
+<div class="site-wrapper">
+
+
+
+    <main id="site-main" class="site-main outer">
+        <div class="inner">
+
+            <article class="post-full post tag-new ">
+
+                <header class="post-full-header">
+                    <div class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="2018-09-04">4 September 2018</time>
+                        <span class="date-divider">/</span> <a href="/tag/new/">New</a>
+                    </div>
+                    <h1 class="post-full-title js-foating-header-trigger js-no-widows">Automatic image optimisation, image galleries and&nbsp;more</h1>
+                </header>
+
+
+                <figure class="post-full-image" style="background-image: url(https://blog.ghost.org/content/images/2018/09/gallery-feature-img.png)">
+                    <div class="post-full-introauthors">
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <div class="basic-info no-cover">
+                                        <img class="author-profile-image" src="https://blog.ghost.org/content/images/2018/09/21371036_10159190635245507_5301064417152251971_n.jpg" alt="Kym Ellis">
+                                        <h2>Kym Ellis</h2>
+                                    </div>
+                                    <div class="author-card-bio">
+                                        <p>Technical Marketing Lead</p>
+                                        <span><a href="/author/kym/">More posts</a> by Kym Ellis.</span>
+                                    </div>
+                                </div>
+
+                                <a href="/author/kym/" class="moving-avatar"><img class="author-profile-image" src="https://blog.ghost.org/content/images/2018/09/21371036_10159190635245507_5301064417152251971_n.jpg" alt="Kym Ellis"></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+
+                <section class="post-full-content">
+                    <div class="post-content">
+                        <p>Using images in Ghost just got a whole lot better with instant image optimisation, responsive image galleries and API improvements!</p><p>The Ghost team just spent a week in the Canary Islands on our bi-annual team retreat. During these retreats our remote team gets together in person to collaborate, have fun, and make plans for the coming months. This time we also shipped several new features which we're excited to share.</p><h3 id="image-optimisation">Image Optimisation</h3><p>We always made it a seamless experience to drop single images into your content on a Ghost publication, but from there onwards there was no optimisation of any kind. It can be painful to manually optimise each image before using it in your post, so we've finally introduced one of our most requested features: <strong>automatic image optimisation</strong>. </p><p>Now when you insert images into your post or page, Ghost will automatically resize and optimise your images with lossless compression. The end result is the same high quality images fully optimised for the web, without any extra effort on your part 🎉</p><hr><h3 id="image-galleries">Image Galleries</h3><p>With the recent launch of <a href="https://blog.ghost.org/2-0/">Ghost 2.0</a>, we introduced the ability to select from three different image widths in posts for single images, allowing for more creative visual direction in your posts. The addition of <strong>image galleries</strong> extends this even further with responsive galleries for up to 9 images at a time. </p><p>Here's what a gallery looks like:</p><figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-10-2.jpg" width="6000" height="4000"></div><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-47-2.jpg" width="6000" height="4000"></div><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-12-2.jpg" width="6000" height="4000"></div></div><div class="kg-gallery-row"><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-61-1.jpg" width="3936" height="2624"></div><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-5.jpg" width="6000" height="4000"></div></div><div class="kg-gallery-row"><div class="kg-gallery-image" style="flex: 1.5 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-23.jpg" width="3936" height="2624"></div><div class="kg-gallery-image" style="flex: 0.666667 1 0%;"><img src="https://blog.ghost.org/content/images/2018/09/Ghost-27-1.jpg" width="2484" height="3726"></div></div></div><figcaption>Photos from the Ghost team retreat – Including 5 new team members 👨‍👩‍👧‍👦</figcaption></figure><p>This unlocks a lot of potential for storytelling with images using Ghost. What's more, the dynamic gallery card will responsively optimise and organise your images to look their best, no matter how many images you choose to add or remove.<br><br>Galleries can be inserted by using the gallery card from the dynamic menu.</p><hr><h3 id="api-improvements">API improvements</h3><p>Alongside these new image features we've also made some improvements to the Ghost API, which now comes with a query parameter to always return absolute image URLs. This makes it a lot easier to work with - no more manual string concatenation! Read more about absolute URLs in the <a href="https://api.ghost.org/docs/absolute-urls">docs</a>.</p><hr><p><strong><strong>Ghost(Pro)</strong></strong> users have already been updated and have access to image galleries and image optimisation within the editor. Self hosted developers can use <a href="https://docs.ghost.org/api/ghost-cli/">Ghost-CLI</a> to get this feature by running <code>$ ghost update</code> to install the <a href="https://github.com/TryGhost/ghost/releases">latest release</a>.</p><p>Galleries require some CSS and JS in your theme to function correctly. Read more about implementing galleries in the theme <a href="https://docs.ghost.org/api/handlebars-themes/">documentation</a>.</p>
+                    </div>
+                </section>
+
+                <footer class="post-full-footer">
+                    <div class="author-card">
+                        <img class="author-profile-image" src="https://blog.ghost.org/content/images/2018/09/21371036_10159190635245507_5301064417152251971_n.jpg" alt="Kym Ellis">
+                        <div class="author-card-content">
+                            <h4 class="author-card-name"><a href="/author/kym/">Kym Ellis</a></h4>
+                            <p>Technical Marketing Lead</p>
+                        </div>
+                    </div>
+                    <div class="post-full-footer-right">
+                        <a class="author-card-button" href="/author/kym/">Read More</a>
+                    </div>
+                </footer>
+
+
+            </article>
+
+        </div>
+    </main>
+
+    <aside class="read-next outer">
+        <div class="inner">
+            <div class="read-next-feed">
+                <article class="post-card js-scroll-item post tag-new">
+
+                    <a class="post-card-image-link" href="/new-docs/">
+                        <div class="post-card-image" style="background-image: url(https://blog.ghost.org/content/images/2018/11/New-Ghost-Docs.png)"></div>
+                    </a>
+
+                    <div class="post-card-content">
+
+                        <a class="post-card-content-link" href="/new-docs/">
+                            <header class="post-card-header">
+                                <span class="post-card-tags">New</span>
+                                <h2 class="post-card-title">All new Ghost Docs &amp; Integrations</h2>
+                            </header>
+                            <div class="post-card-excerpt">
+                                <p>Our entire Ghost docs library has had a complete makeover as well as some brand new additions including tutorials and integrations ✨</p>
+                            </div>
+                        </a>
+
+                        <footer class="post-card-meta">
+                            <ul class="author-list">
+                                <li class="author-list-item">
+
+                                    <div class="author-name-tooltip">
+                                        Kym Ellis
+                                    </div>
+
+                                    <a href="/author/kym/" class="static-avatar"><img class="author-profile-image" src="https://blog.ghost.org/content/images/2018/09/21371036_10159190635245507_5301064417152251971_n.jpg" alt="Kym Ellis"></a>
+
+
+
+                                </li>
+                            </ul>
+                            <span class="reading-time">3 min read</span>
+                        </footer>
+
+                    </div>
+
+                </article>
+
+                <article class="post-card js-scroll-item post tag-new">
+
+                    <a class="post-card-image-link" href="/new-docs/">
+                        <div class="post-card-image" style="background-image: url(https://blog.ghost.org/content/images/2018/11/New-Ghost-Docs.png)"></div>
+                    </a>
+
+                    <div class="post-card-content">
+
+                        <a class="post-card-content-link" href="/new-docs/">
+                            <header class="post-card-header">
+                                <span class="post-card-tags">New</span>
+                                <h2 class="post-card-title">All new Ghost Docs &amp; Integrations</h2>
+                            </header>
+                            <div class="post-card-excerpt">
+                                <p>Our entire Ghost docs library has had a complete makeover as well as some brand new additions including tutorials and integrations ✨</p>
+                            </div>
+                        </a>
+
+                        <footer class="post-card-meta">
+                            <ul class="author-list">
+                                <li class="author-list-item">
+
+                                    <div class="author-name-tooltip">
+                                        Kym Ellis
+                                    </div>
+
+                                    <a href="/author/kym/" class="static-avatar"><img class="author-profile-image" src="https://blog.ghost.org/content/images/2018/09/21371036_10159190635245507_5301064417152251971_n.jpg" alt="Kym Ellis"></a>
+
+
+
+                                </li>
+                            </ul>
+                            <span class="reading-time">3 min read</span>
+                        </footer>
+
+                    </div>
+
+                </article>
+                
+                
+                <article class="post-card js-scroll-item post tag-new tag-hash-feature featured">
+
+                    <a class="post-card-image-link" href="/2-0/">
+                        <div class="post-card-image" style="background-image: url(https://blog.ghost.org/content/images/2018/08/blog-post-header.svg)"></div>
+                    </a>
+
+                    <div class="post-card-content">
+
+                        <a class="post-card-content-link" href="/2-0/">
+                            <header class="post-card-header">
+                                <span class="post-card-tags">New</span>
+                                <h2 class="post-card-title">Introducing Ghost 2.0</h2>
+                            </header>
+                            <div class="post-card-excerpt">
+                                <p>A powerful new editor, multi-language support, custom homepages, dynamic routes, custom structures and much more</p>
+                            </div>
+                        </a>
+
+                        <footer class="post-card-meta">
+                            <ul class="author-list">
+                                <li class="author-list-item">
+
+                                    <div class="author-name-tooltip">
+                                        John O'Nolan
+                                    </div>
+
+                                    <a href="/author/john/" class="static-avatar"><img class="author-profile-image" src="//www.gravatar.com/avatar/f95828f4e92f1befebabfb7f65cdc8f2?s=250&amp;d=mm&amp;r=x" alt="John O'Nolan"></a>
+
+
+
+                                </li>
+                            </ul>
+                            <span class="reading-time">5 min read</span>
+                        </footer>
+
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <!--<a class="button button-secondary button-shadow " href="#">Get started</a>-->
+
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
