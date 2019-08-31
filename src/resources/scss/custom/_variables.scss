@@ -27,3 +27,17 @@
 // Custom variables
 //
 // Need additional variables? Simply create it here and make sure you follow the naming formula explained at the top of this file.
+
+
+// Custom Overrides //
+
+// Color system
+
+$secondary: #f7fafc;
+
+// Sections
+
+$section-colors: ();
+$section-colors: map-merge((
+        "secondary":    $secondary,
+), $section-colors);

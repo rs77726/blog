@@ -75,7 +75,7 @@
     <!-- Header -->
     <header class="" id="header-main">
         <!-- Topbar -->
-        <div id="navbar-top-main" class="navbar-top py-1 navbar-light bg-white navbar-border">
+        <!--<div id="navbar-top-main" class="navbar-top py-1 navbar-light bg-white navbar-border">
             <div class="container">
                 <div class="navbar-nav align-items-center">
                     <div class="d-none d-lg-inline-block">
@@ -151,7 +151,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-light bg-white" id="navbar-main">
             <div class="container">
@@ -448,17 +448,22 @@
                         </li>
                     </ul>
                     <!-- Desktop Button -->
-                    <a class="btn btn-sm d-none d-lg-inline-block btn-primary ml-auto" href="https://themes.getbootstrap.com/product/quick-website-ui-kit/" target="_blank">
-                        Purchase now
-                    </a>
+                    <button type="button" class="btn btn-primary btn-sm btn-icon-label rounded-pill ml-auto" data-action="omnisearch-open" data-target="#omnisearch">
+                        <span class="btn-inner--icon">
+                            <i data-feather="search"></i>
+                        </span>
+                        <span class="btn-inner--text">Search</span>
+                    </button>
                     <!-- Mobile button -->
                     <div class="d-lg-none p-4 text-center">
-                        <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit/" class="btn btn-block btn-sm btn-neutral rounded-pill" target="_blank">Purchase now</a>
+                        <a href="" data-action="omnisearch-open" data-target="#omnisearch" class="btn btn-block btn-sm btn-neutral rounded-pill" target="_blank">Search</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
+
     <!-- Omnisearch -->
     <div id="omnisearch" class="omnisearch">
         <div class="container">
@@ -865,13 +870,13 @@
                         <ul class="nav align-items-center justify-content-center justify-content-md-end">
                             <li class="nav-item dropdown border-right pr-2">
                                 <a class="nav-link btn btn-xs btn-neutral" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img alt="Image placeholder" src="assets/img/icons/flags/ro.svg" class="svg-inject icon-flag">
-                                    <span class="h6 text-sm mb-0">Romanian</span>
+                                    <img alt="Image placeholder" src="assets/img/icons/flags/us.svg" class="svg-inject icon-flag">
+                                    <span class="h6 text-sm mb-0">English</span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                    <a href="#" class="dropdown-item"><img alt="Image placeholder" src="assets/img/icons/flags/es.svg" class="svg-inject icon-flag">Spanish</a>
-                                    <a href="#" class="dropdown-item"><img alt="Image placeholder" src="assets/img/icons/flags/us.svg" class="svg-inject icon-flag">English</a>
-                                    <a href="#" class="dropdown-item"><img alt="Image placeholder" src="assets/img/icons/flags/gr.svg" class="svg-inject icon-flag">Greek</a>
+                                    <a href="#" class="dropdown-item disabled"><img alt="Image placeholder" src="assets/img/icons/flags/es.svg" class="svg-inject icon-flag">Spanish</a>
+                                    <a href="#" class="dropdown-item disabled"><img alt="Image placeholder" src="assets/img/icons/flags/ro.svg" class="svg-inject icon-flag">Russian</a>
+                                    <a href="#" class="dropdown-item disabled"><img alt="Image placeholder" src="assets/img/icons/flags/gr.svg" class="svg-inject icon-flag">Greek</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -915,6 +920,7 @@
     <script src="assets/libs/jquery.scrollbar/jquery.scrollbar.min.js"></script>
     <script src="assets/libs/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
     <!-- Page JS -->
+    <script src="assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <!-- Quick JS -->
     <script src="assets/js/quick-website.js"></script>
