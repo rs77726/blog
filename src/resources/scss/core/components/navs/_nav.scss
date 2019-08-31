@@ -1,0 +1,14 @@
+//
+// Nav
+//
+
+
+.nav-link {
+    color: $nav-link-color;
+    font-size: $nav-link-font-size;
+
+    &:hover,
+    &.active {
+        color: theme-color("primary");
+    }
+}

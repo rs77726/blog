@@ -1,0 +1,174 @@
+// Spacing columns vertically
+
+.row-grid {
+    + .row-grid {
+        margin-top: 3rem;
+    }
+
+    > [class*="col-"] + [class*="col-"] {
+        margin-top: 3rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .row.row-grid {
+        > [class*="col-lg-"] + [class*="col-lg-"] {
+            margin-top: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .row.row-grid {
+        > [class*="col-md-"] + [class*="col-md-"] {
+            margin-top: 0;
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    .row.row-grid {
+        > [class*="col-sm-"] + [class*="col-sm-"] {
+            margin-top: 0;
+        }
+    }
+}
+
+// Spacing for elements with absolute position
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop, $abbrev in (top: top) {
+            @each $size, $length in $spacers {
+
+                // Spacing (for elements with absolute position)
+                .top#{$infix}-#{$size} {
+                    top: $length !important;
+                }
+                .right#{$infix}-#{$size} {
+                    right: $length !important;
+                }
+                .bottom#{$infix}-#{$size} {
+                    bottom: $length !important;
+                }
+                .left#{$infix}-#{$size} {
+                    left: $length !important;
+                }
+
+                // Negative spacing
+                .top#{$infix}-n#{$size} {
+                    top: -$length !important;
+                }
+                .right#{$infix}-n#{$size} {
+                    right: -$length !important;
+                }
+                .bottom#{$infix}-n#{$size} {
+                    bottom: -$length !important;
+                }
+                .left#{$infix}-n#{$size} {
+                    left: -$length !important;
+                }
+
+            }
+        }
+    }
+}
+
+.center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.middle {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// // Negative margins and paddings
+//
+// @media(min-width: 992px) {
+//     [class*="mt--"],
+//     [class*="mr--"],
+//     [class*="mb--"],
+//     [class*="ml--"] {
+//         position: relative;
+//         z-index: 5;
+//     }
+//
+//
+//     // Large negative margins in pixels
+//
+//     .mt--100 {
+//         margin-top: -100px !important;
+//     }
+//     .mr--100 {
+//         margin-right: -100px !important;
+//     }
+//     .mb--100 {
+//         margin-bottom: -100px !important;
+//     }
+//     .ml--100 {
+//         margin-left: -100px !important;
+//     }
+//     .mt--150 {
+//         margin-top: -150px !important;
+//     }
+//     .mb--150 {
+//         margin-bottom: -150px !important;
+//     }
+//     .mt--200 {
+//         margin-top: -200px !important;
+//     }
+//     .mb--200 {
+//         margin-bottom: -200px !important;
+//     }
+//     .mt--300 {
+//         margin-top: -300px !important;
+//     }
+//     .mb--300 {
+//         margin-bottom: -300px !important;
+//     }
+//
+//     // Large margins in pixels
+//
+//     .pt-100 {
+//         padding-top: 100px !important;
+//     }
+//     .pb-100 {
+//         padding-bottom: 100px !important;
+//     }
+//     .pt-150 {
+//         padding-top: 150px !important;
+//     }
+//     .pb-150 {
+//         padding-bottom: 150px !important;
+//     }
+//     .pt-200 {
+//         padding-top: 200px !important;
+//     }
+//     .pb-200 {
+//         padding-bottom: 200px !important;
+//     }
+//     .pt-250 {
+//         padding-top: 250px !important;
+//     }
+//     .pb-250 {
+//         padding-bottom: 250px !important;
+//     }
+//     .pt-300 {
+//         padding-top: 300px!important;
+//     }
+//     .pb-300 {
+//         padding-bottom: 300px!important;
+//     }
+// }
+
+
+// Negative margin: works with negative-margin.js
+
+[data-negative-margin] {
+    &.is_stuck {
+        margin: 0 !important;
+    }
+}
